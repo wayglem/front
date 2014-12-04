@@ -212,38 +212,6 @@ module.exports = function(grunt) {
                 cwd: 'build/',
                 src: ['**']
             }
-        },
-        nexusDeployer: {
-            snapshot: {
-                options: {
-                    groupId: 'com.orange.gqd',
-                    artifactId: 'gqd-gui',
-                    version: releaseVersion+'-SNAPSHOT',
-                    packaging: 'zip',
-                    classifier: 'dev',
-
-                    auth: {
-                        username:'gqd_team',
-                        password:'W4nn4P14y'
-                    },
-                    url: 'http://maven2.rd.francetelecom.fr/proxy/content/repositories/inhouse.snapshot/',
-                    artifact: 'gqd-gui.zip'
-                }
-            },
-            'release': {
-                options: {
-                    groupId: 'com.orange.gqd',
-                    artifactId: 'gqd-gui',
-                    version: grunt.option('versionRelease'),
-                    packaging: 'zip',
-                    auth: {
-                        username:'gqd_team',
-                        password:'W4nn4P14y'
-                    },
-                    url: 'http://maven2.rd.francetelecom.fr/proxy/content/repositories/inhouse/',
-                    artifact: 'gqd-gui.zip'
-                }
-            }
         }
     });
 
@@ -260,7 +228,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-processhtml');
-    grunt.loadNpmTasks('grunt-nexus-deployer');    
 
     grunt.registerTask('default', ['dev']);
 
@@ -280,8 +247,6 @@ module.exports = function(grunt) {
             grunt.fail.warn('Le parametre --versionRelease est obligatoire');
         } 
     }) ;
-
-    grunt.registerTask('deployOnNexus', ['verifyParam','prod', 'nexusDeployer:release']);
 
     grunt.registerTask('init', ['jshint']);
 
