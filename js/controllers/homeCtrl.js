@@ -10,3 +10,4 @@ controller('HomeCtrl', ['$scope', function($scope) {
 		{'name': 'Solitude', checked:false},
 	];
 }]);
+	

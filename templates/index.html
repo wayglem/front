@@ -52,6 +52,9 @@
 		<!-- controllers -->
 		<script src="js/controllers/homeCtrl.js"></script>
 
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+		<script type="text/javascript" src="js/geolocalisation.js"></script>
+
 		<!-- services -->
 
 		<!-- directives -->
@@ -69,32 +72,31 @@
 		<div class="row card">
 			<div class="col-xs-12 title">Action Urgente</div>
 			<div class="col-xs-12 details">
-				<div class="button col-xs-12 col-sm-6">Je suis témoin d'une agression</div>
+				<div class="button col-xs-12 col-sm-6" ng-click="agression =true">Je suis témoin d'une agression</div>
 				<div class="button col-xs-12 col-sm-6">Je suis devant une personne blessée</div>
+				<div ng-show="agression" class="col-xs-12 solution">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet sit facilis itaque esse mollitia officia corrupti quas deleniti fuga, possimus pariatur, voluptatibus blanditiis ducimus reprehenderit a hic eaque nostrum error.</div>
 			</div>
 		</div>
 		<div class="row or">OU</div>
 		<div class="row card2">
-			<div class="col-xs-12 title">Signaler la personne en détresse</div>
-			<div class="col-xs-12 details">
-				
-				<div class="checklist col-xs-12 col-sm-3">
-					<ul class="unstyled">
-						<li ng-repeat="issue in issues">
-							<input type="checkbox" ng-model="issue.checked">
-							<span>{{issue.name}}</span>
-						</li>
-					</ul>
-				</div>
-				<div class="button col-xs-12 col-sm-9">(Infos en direct)</div>
+			<div class="col-xs-12 title">Aider une personne en détresse</div>
+			<div class="checklist col-xs-12 col-sm-3">
+				<ul class="unstyled">
+					<li ng-repeat="issue in issues">
+						<input type="checkbox" ng-model="issue.checked">
+						<span>{{issue.name}}</span>
+					</li>
+				</ul>
 			</div>
+			<div id="map" class="col-xs-12 col-sm-9" style="height: 500px"></div>
 		</div>
-		<div class="row bottom">
-			<img src="images/bottom.png" alt="">
 		</div>
+	<div class="row bottom">
+		<img src="images/bottom.png" alt="">
+	</div>
 
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="vendor/bootstrap/bootstrap.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="vendor/bootstrap/bootstrap.min.js"></script>
 
 	</body>
 </html>
