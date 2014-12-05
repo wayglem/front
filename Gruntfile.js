@@ -208,7 +208,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			dev: {
-				files: ['js/**/*.js', 'js/*.js', 'pages/*','css/style.less'],
+				files: ['js/**/*.js', 'js/*.js', 'pages/*','css/style.less', 'templates/index.html'],
 				tasks: ['dev'],
 				options: {
 					debounceDelay: 25,
@@ -264,7 +264,7 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('init', ['jshint']);
 
-	grunt.registerTask('dev', ['env:dev', 'clean:dev', 'karma:unit', 'preprocess:dev', 'copy:dev']);
+	grunt.registerTask('dev', ['less:dev', 'env:dev', 'clean:dev', 'karma:unit', 'preprocess:dev', 'copy:dev']);
 
 	grunt.registerTask('test', ['karma:unit']);
 

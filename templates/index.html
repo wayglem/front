@@ -1,105 +1,100 @@
 <!DOCTYPE html>
 <html lang="fr" ng-app="d3App">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>GQD Dashboard</title>
-        <!-- Bootstrap -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/ng-table.min.css" rel="stylesheet">
-        
-        <!-- /build -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GQD Dashboard</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/ng-table.min.css" rel="stylesheet">
 
-        <!-- @if NODE_ENV == 'DEVELOPMENT' -->
-        
-        
-        <!-- app css -->
-        <link href="css/styleDONOTTOUCH.css" rel="stylesheet" type="text/css" media="screen">
-        <!-- Map libs --> 
-        <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" media="screen">
-        <link href="css/horizontalBarChart.css" rel="stylesheet" type="text/css" media="screen">
-        <link href="css/cloudChart.css" rel="stylesheet" type="text/css" media="screen">
-        
-        <!-- @endif -->
-    
-        <!-- @if NODE_ENV == 'PRODUCTION' -->
-        <link href="css/app.min.css" rel="stylesheet" type="text/css" media="screen">
-        <!-- @endif -->
+		<!-- /build -->
+
+		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 
 
-        <!-- Javascript files -->
-        
-        <!-- AngularJS--> 
-        <script src="vendor/angular/angular.min.js" type="application/javascript"></script>
-        <script src="vendor/angular/ng-table.min.js" type="application/javascript"></script>
-        <script src="vendor/angular/ng-route.js" type="application/javascript"></script>
-        <!-- elasticsearch js api -->
-        <script src="vendor/elasticsearch/elasticsearch.js" type="application/javascript"></script>
-        <script src="vendor/elasticsearch/elasticsearch.angular.min.js" type="application/javascript"></script>
+		<!-- app css -->
+		<link href="css/styleDONOTTOUCH.css" rel="stylesheet" type="text/css" media="screen">
+		<!-- Map libs --> 
+		<link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="css/horizontalBarChart.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="css/cloudChart.css" rel="stylesheet" type="text/css" media="screen">
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins and jVectoMap) -->
-        <script src="vendor/jquery/jquery-1.11.1.min.js" type="application/javascript"></script>
+		<!-- @endif -->
 
-        <!-- map libs -->
-        <script src="vendor/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-
-        <!-- app scripts  -->
-        
-        <!-- other application files -->
-        <script src="js/app.js" type="application/javascript"></script>
-
-        <!-- controllers -->
-        <script src="js/controllers/homeCtrl.js"></script>
-
-        <!-- services -->
-
-        <!-- directives -->
+		<!-- @if NODE_ENV == 'PRODUCTION' -->
+		<link href="css/app.min.css" rel="stylesheet" type="text/css" media="screen">
+		<!-- @endif -->
 
 
-        <!-- configuration file-->
+		<!-- Javascript files -->
 
-    </head>
+		<!-- AngularJS--> 
+		<script src="vendor/angular/angular.min.js" type="application/javascript"></script>
+		<script src="vendor/angular/ng-table.min.js" type="application/javascript"></script>
+		<script src="vendor/angular/ng-route.js" type="application/javascript"></script>
+		<!-- elasticsearch js api -->
+		<script src="vendor/elasticsearch/elasticsearch.js" type="application/javascript"></script>
+		<script src="vendor/elasticsearch/elasticsearch.angular.min.js" type="application/javascript"></script>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins and jVectoMap) -->
+		<script src="vendor/jquery/jquery-1.11.1.min.js" type="application/javascript"></script>
+
+		<!-- map libs -->
+		<script src="vendor/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+
+		<!-- app scripts  -->
+
+		<!-- other application files -->
+		<script src="js/app.js" type="application/javascript"></script>
+
+		<!-- controllers -->
+		<script src="js/controllers/homeCtrl.js"></script>
+
+		<!-- services -->
+
+		<!-- directives -->
 
 
-    <body role="document" ng-controller="HomeCtrl">
-        <div class="navbar navbar-inverse" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- TODO : mettre l'adresse de la page d'accueil. -->
-                    <a class="navbar-brand" href="/">
-                        <img alt="Accueil" src="images/homepage.png">
-                    </a>
-                </div>
-                <div class="navbar-collapse collapse" >
-                    <ul class="nav navbar-nav navbar-left">
-                        <li>
-                           <a href="#help">Help</a>
-                       </li>
-                    </ul>
-               </div>
-            </div>
-        </div>
-        <!-- content -->
-        <div class="container theme-showcase" role="main">
-            <!-- views will be injected here. -->
-            <div class="animate" ng-view></div>
+		<!-- configuration file-->
 
-            <footer id="footer">
-                <div class="divider_lvl_1a">
-                    <hr class="hide">
-                </div>
-                <a href="mailto:" class="">Contact</a>
-            </footer>
-        </div>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="vendor/bootstrap/bootstrap.min.js"></script>
+	</head>
 
-    </body>
+
+	<body role="document" ng-controller="HomeCtrl" class="container">
+		<div class="row header">
+			<div class="col-xs-12">B-A.BA</div>
+		</div>
+		<div class="row card">
+			<div class="col-xs-12 title">Action Urgente</div>
+			<div class="col-xs-12 details">
+				<div class="button col-xs-12 col-sm-6">Je suis témoin d'une agression</div>
+				<div class="button col-xs-12 col-sm-6">Je suis devant une personne blessée</div>
+			</div>
+		</div>
+		<div class="row or">OU</div>
+		<div class="row card2">
+			<div class="col-xs-12 title">Signaler la personne en détresse</div>
+			<div class="col-xs-12 details">
+				
+				<div class="checklist col-xs-12 col-sm-3">
+					<ul class="unstyled">
+						<li ng-repeat="issue in issues">
+							<input type="checkbox" ng-model="issue.checked">
+							<span>{{issue.name}}</span>
+						</li>
+					</ul>
+				</div>
+				<div class="button col-xs-12 col-sm-9">(Infos en direct)</div>
+			</div>
+		</div>
+		<div class="row bottom">
+			<img src="images/bottom.png" alt="">
+		</div>
+
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="vendor/bootstrap/bootstrap.min.js"></script>
+
+	</body>
 </html>
