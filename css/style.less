@@ -53,6 +53,23 @@
 		}
 	}
 
+	.steps{
+		.step {
+			background: lighten(@peach,10%);
+			text-align: center;
+			margin-bottom: 15px;
+			padding: 5px;
+			vertical-align: middle;
+			min-height: 120px;
+
+			p {
+				font-weight:bold;
+				font-size: 120%;
+				font-family: argh;
+			}
+		}
+	}
+
 
 }
 
@@ -116,6 +133,16 @@
 .or {
 	text-align: center;
 	font-family: archBold;
-	font-size: 35px;
+	font-size: 36px;
 	margin-top : 20px;
+} 
+
+.slide.ng-enter, .slide.ng-leave {
+	-webkit-transition:0.5s linear all;
+	transition:0.5s linear all;
 }
+
+.slide.ng-enter { }        /* starting animations for enter */
+.slide.ng-enter.ng-enter-active { } /* terminal animations for enter */
+.slide.ng-leave { }        /* starting animations for leave */
+.slide.ng-leave.ng-leave-active { } /* terminal animations for leave */
