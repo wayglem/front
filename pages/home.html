@@ -37,17 +37,21 @@
 		</div>
 		<div class="row or">OU</div>
 		<div class="row card2">  
-			<div class="col-xs-12 title">Signaler la personne en détresse</div>
+			<div class="col-xs-12 title">Aider la personne en détresse</div>
 			<div class="col-xs-12 details">
 
 				<div class="checklist col-xs-12 col-sm-3">
 					<ul class="unstyled">
-						<li ng-repeat="issue in issues">
+						<!--<li ng-repeat="issue in issues">
 							<input type="checkbox" ng-model="issue.checked">
 							<span>{{issue.name}}</span>
-						</li>
+						</li>-->
+						<li><input type="radio" name="typeBesoin" ng-model="radioButton" value="{{issues[0].name}}"><span>{{issues[0].name}}</span></li>
+						<li><input type="radio" name="typeBesoin" ng-model="radioButton" value="{{issues[1].name}}"><span>{{issues[1].name}}</span></li>
+						<li><input type="radio" name="typeBesoin" ng-model="radioButton" value="{{issues[2].name}}"><span>{{issues[2].name}}</span></li>
+						
 					</ul>
-					<div id="info"></div>
+					<div id="info"></div> 
 				</div>
 			<div id="map" class="col-xs-12 col-sm-9" style="height: 500px"></div>
 			</div>

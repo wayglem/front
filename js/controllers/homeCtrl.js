@@ -8,15 +8,17 @@ controller('HomeCtrl', ['$scope', function($scope) {
 		{'name': 'Besoin des forces de l\'ordre', checked:false},
 	];
 		
-	$scope.$watch("issues", function () {
-			if ($scope.issues[0].checked){
+	$scope.$watch("radioButton", function () {
+		console.log("watched")
+			if ($scope.issues[0].name == $scope.radioButton){
+				console.log("coucou");
 				displayWater();
 			}
-			else if ($scope.issues[1].checked){
+			else if ($scope.issues[1].name == $scope.radioButton){
 				displayFire();
 			}
-			else if ($scope.issues[2].checked){
+			else if ($scope.issues[2].name == $scope.radioButton){
 				displayPolice();
 			}
-		}, true);
+		});
 }]);

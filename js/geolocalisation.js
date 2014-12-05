@@ -1,3 +1,5 @@
+window.geomarkers = new Array();
+
 function errorGeolocation(error) {
 	var info = "Erreur lors de la géolocalisation : ";
 	switch (error.code) {
