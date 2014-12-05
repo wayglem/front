@@ -8,7 +8,11 @@ d3App.config(['$routeProvider', function($routeProvider) {
     .when('/help', {
         templateUrl : 'pages/help.html',
         controller  : 'HomeCtrl'
-    });
+    })
+	.when('/', {
+		templateUrl : 'pages/home.html',
+		controller : 'HomeCtrl'
+	});
 /*
     .when('/project/:proj', {
         templateUrl : 'pages/support.html',

@@ -116,12 +116,9 @@
   font-size: 36px;
   margin-top: 20px;
 }
-.slide.ng-enter,
-.slide.ng-leave {
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
+.title {
+  font-family: argh;
 }
-/* starting animations for enter */
-/* terminal animations for enter */
-/* starting animations for leave */
-/* terminal animations for leave */
+.help {
+  padding: 20px 15px;
+}

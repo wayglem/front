@@ -66,60 +66,8 @@
 		<div class="row header">
 			<div class="col-xs-12">B-A.BA</div>
 		</div>
-		<div class="row card">
-			<div class="col-xs-12 title">Action Urgente</div>
-			<div class="col-xs-12 details">
-				<div class="button col-xs-12 col-sm-6" ng-click="agression = !agression; blessure = false">Je suis témoin d'une agression</div>
-				<div class="button col-xs-12 col-sm-6" ng-click="blessure = !blessure; agression=false">Je suis devant une personne blessée</div>
-				
-				<div class="steps" ng-show="agression">
-					<div class="step col-xs-12 col-sm-4">
-						<p>Portez secours à la victime</p>
-						Soit en vous interposant si cela ne vous met pas en danger, soit en appelant les secours (SAMU, sapeurs-pompiers ou police).
-					</div>
-					<div class="step col-xs-12 col-sm-4">
-						<p>Identifiez l'agresseur</p>
-						Apparence, signes particuliers, plaque d'immatriculation. Mémorisez le plus d'informations possible.
-					</div>
-					<div class="step col-xs-12 col-sm-4">
-						<p>Alertez immédiatement</p>
-						 Appelez les services de la police ou de la gendarmerie en composant le <a href="tel:17">17</a>.
-					</div>
-				</div>
-				
-				<div class="steps" ng-show="blessure">
-					<div class="step col-xs-12 col-sm-4">
-						<p>Protégez la victime</p>
-						Installez un périmètre de sécurité, pour protéger des véhicules notamment.
-					</div>
-					<div class="step col-xs-12 col-sm-4">
-						<p>Identifiez son état</p>
-						La victime respire-t-elle ? Est-elle consciente ? Il y a-t-il des saignements ?
-					</div>
-					<div class="step col-xs-12 col-sm-4">
-						<p>Appelez les secours</p>
-						 Le SAMU au <a href="tel:15">15</a> ou les pompiers au <a href="tel:15">18</a>. Indiquez à l'interlocuteur les informations précédentes. Ne raccrochez jamais le premier.
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row or">OU</div>
-		<div class="row card2">  
-			<div class="col-xs-12 title">Signaler la personne en détresse</div>
-			<div class="col-xs-12 details">
-
-				<div class="checklist col-xs-12 col-sm-3">
-					<ul class="unstyled">
-						<li ng-repeat="issue in issues">
-							<input type="checkbox" ng-model="issue.checked">
-							<span>{{issue.name}}</span>
-						</li>
-					</ul>
-				</div>
-				<div class="button col-xs-12 col-sm-9">(Infos en direct)</div>
-			</div>
-		</div>
-		<div class="row bottom">
+		<div ng-view></div>
+				<div class="row bottom">
 			<img src="images/bottom.png" alt="">
 		</div>
 
