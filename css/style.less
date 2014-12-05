@@ -1,0 +1,121 @@
+@import 'colors';
+@import 'fonts';
+
+.container{
+	background: #efefef;
+	height: 100%;
+}
+
+.header {
+	background: darken(@lightGreen,10%);
+	color: @white;
+	font-family: archBold;
+	font-size: 65px;
+
+
+}
+@media screen and (min-width: 767px) {
+	.header {
+		margin-top: 15px;
+	}
+}
+
+
+.card {
+	margin-top: 20px;
+
+	.title {
+		text-align: center;
+		font-family: argh;
+		background: darken(@darkRed,10%);
+		font-size: 20px;
+		color: @white;
+		padding: 10px 5px;
+	}
+
+	.details {
+		background:@peach;
+
+		.button {	
+			padding: 10px;
+			text-align: center;
+			font-family: argh;
+			color: @white;
+			font-size: 18px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border: 5px solid @peach;
+			background:@darkRed;
+
+			&:hover {
+				background: lighten(@darkRed, 10%);
+			}
+		}
+	}
+
+
+}
+
+.card2 {
+	margin-top: 20px;
+
+	.title {
+		text-align: center;
+		font-family: argh;
+		background: darken(@orange,10%);
+		font-size: 20px;
+		color: @white;
+		padding: 10px 5px;
+	}
+
+	.details {
+		background:@peach;
+
+		.button {	
+			padding: 10px;
+			text-align: center;
+			font-family: argh;
+			color: @white;
+			font-size: 18px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border: 5px solid @peach;
+			background:@orange;
+
+			&:hover {
+				background: lighten(@orange, 10%);
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+
+	}
+
+	.checklist {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-top: 10px;
+		border: 5px solid @peach;
+		background: lighten(@orange, 10%);
+		font-family: argh;
+		font-size: 16px;
+	}
+
+
+}
+
+.bottom {
+	img{
+		margin-top: 30px;
+		width: 100%;
+	}
+}
+
+.or {
+	text-align: center;
+	font-family: archBold;
+	font-size: 35px;
+	margin-top : 20px;
+}
